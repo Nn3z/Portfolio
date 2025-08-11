@@ -1,0 +1,55 @@
+.card-content {
+  background: rgba(255, 255, 255, 0.08); /* Fondo translúcido */
+  border-radius: 16px;
+  backdrop-filter: blur(10px); /* Efecto vidrio */
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-content:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.project-info {
+  padding: 1rem;
+  color: white;
+}
+
+.project-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-info p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.project-link:hover {
+  background: rgba(255, 255, 255, 0.3);
+}

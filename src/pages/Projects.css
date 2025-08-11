@@ -1,0 +1,47 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1.5rem; /* agrega espacio interior */
+}
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.project-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1rem;
+}
+
+.project-info h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.project-info p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.project-info a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #00aaff;
+  text-decoration: none;
+}

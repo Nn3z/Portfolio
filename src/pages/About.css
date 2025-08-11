@@ -1,0 +1,105 @@
+.about-container {
+  display: flex;
+  min-height: 80vh;
+  color: white; /* Mantiene el texto visible */
+  background: transparent; /* Fondo transparente */
+}
+
+/* Sidebar */
+.about-sidebar {
+  width: 200px;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrado vertical */
+  gap: 1rem;
+  background: transparent; /* Fondo transparente */
+}
+
+
+.about-sidebar button {
+  background: transparent;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.about-sidebar button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.about-sidebar button.active {
+  background: #ff9900;
+}
+
+/* Contenido */
+.about-content {
+  flex: 1;
+  padding: 2rem;
+  background: transparent; /* Fondo transparente */
+}
+
+.tech-section h3 {
+  margin-top: 1rem;
+  color: #fff;
+}
+
+.tech-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tech-card {
+  background: rgba(255,255,255,0.05);
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 80px;
+}
+
+.tech-card img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.tech-card span {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #ddd;
+}
+
+.text-section {
+  background: rgba(255, 255, 255, 0.05); /* Fondo semi-transparente */
+  backdrop-filter: blur(8px); /* Efecto vidrio */
+  -webkit-backdrop-filter: blur(8px); /* Safari */
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.text-section h2 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.text-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* Animación suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
