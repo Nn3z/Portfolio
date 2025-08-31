@@ -10,7 +10,7 @@ export default function Navbar() {
       <Link to="/projects" className="nav-link">Proyectos</Link>
       <Link to="/contact" className="nav-link">Contacto</Link>
 
-      <a href="/pdf/prueba.pdf" className="cv-button">DESCARGAR CV 📂</a>
+      <a href="/pdf/cv.pdf" className="cv-button">DESCARGAR CV 📂</a>
     </nav>
   );
 }
