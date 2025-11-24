@@ -8,7 +8,7 @@ export default function About() {
   const sections = {
     bio: {
       type: "text",
-      content: "Soy Pablo Diego Núñez Ponce, un desarrollador backend de Ixtapaluca, EDO. MEX. 📍, me centro en mis estudios y mis hobbies. Tengo un título como TÉCNICO EN PROGRAMACIÓN, acreditado en CECYTEM Ixtapaluca II 🎓. Con 1 año de experiencia laboral como desarrollador backend, he trabajado en una gran variedad de proyectos web y móviles. Fui líder de backend de un proyecto por 3 meses 🚀. He tomado diferentes cursos, de los cuales destacan el de DOCKER y AWS 💡."
+      content: "Soy Pablo Diego Núñez Ponce, un desarrollador backend de Ixtapaluca, EDO. MEX. 📍, me centro en mis estudios y mis hobbies. Tengo un título como TÉCNICO EN PROGRAMACIÓN, acreditado en CECYTEM Ixtapaluca II 🎓. Con 2 años de experiencia laboral como desarrollador backend, he trabajado en una gran variedad de proyectos web y móviles. Fui líder de backend de un proyecto por 3 meses 🚀. He tomado diferentes cursos, de los cuales destacan el de DOCKER, AWS y IA  generativa con GCP 💡."
     },
     tech: {
       type: "tech",
@@ -31,7 +31,7 @@ export default function About() {
     },
     hobbies: {
       type: "text",
-      content: "Me gusta mucho jugar videojuegos, desde pequeño ese ha sido mi hobby más marcado 🎮. He jugado un sinfín de títulos, tanto de PlayStation, Xbox, Nintendo y PC (no me arrepiento de nada JAJAJA) 😂. He adoptado mi profesión como un hobby, me gusta estudiar todo lo relacionado con mi carrera, además de que hago servicios de mantenimiento de PC y software 🧑‍🔧"
+      content: "Mantengo un enfoque de **aprendizaje continuo**, considerando mi profesión como una extensión de mis intereses personales. Disfruto de realizar **servicios de mantenimiento de hardware y software** 🧑‍🔧, lo cual refuerza mis habilidades de diagnóstico y solución de problemas complejos. Adicionalmente, soy un entusiasta de los videojuegos 🎮, actividad que me ha enseñado el valor de la estrategia, la disciplina y la dedicación para lograr el dominio en cualquier área."
     }
   };
 

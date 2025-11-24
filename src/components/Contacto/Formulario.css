@@ -55,3 +55,46 @@
   background: #ff8533;
   transform: translateY(-2px);
 }
+
+/* Estilos responsive para mobile */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem;
+    max-width: 100%;
+    margin: 0 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 1rem;
+    margin: 0 0.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-form textarea {
+    min-height: 100px;
+  }
+
+  .contact-form button {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+}

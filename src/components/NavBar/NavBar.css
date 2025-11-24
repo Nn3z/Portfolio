@@ -3,14 +3,27 @@
   background: #222;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 3rem;
   border: 1px solid #ff9900;
+  position: relative;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
 }
 
 .navbar img {
   height: 50px;
   width: auto;
   filter: invert(1);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 
 .nav-link {
@@ -44,12 +57,127 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none;
-  position: relative;
-  left: 1000px;
+  font-weight: 500;
 }
 
 .cv-button:hover {
-    color: white;
+  color: white;
   background-color: #222;
   box-shadow: #ff9900 0px 0px 10px;
+}
+
+/* Botón hamburguesa - oculto por defecto */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #ff9900;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Estilos para mobile */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    background: #222;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 5rem 2rem 2rem;
+    gap: 2rem;
+    border-left: 1px solid #ff9900;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  .cv-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .navbar img {
+    height: 40px;
+  }
+}
+
+/* Overlay para cerrar el menú al hacer clic fuera */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-overlay {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.75rem;
+  }
+
+  .nav-menu {
+    width: 85%;
+    padding: 4rem 1.5rem 2rem;
+  }
+
+  .navbar img {
+    height: 35px;
+  }
 }

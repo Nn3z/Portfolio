@@ -1,4 +1,4 @@
-import { link } from "framer-motion/client";
+import { image, link } from "framer-motion/client";
 
 export const projects = [
     {
@@ -16,5 +16,15 @@ export const projects = [
         description: "Este es una API que permite el manejo de tareas, puedes crear, completar, ver todas las tareas, ver las completas o incompletas",
         image: "/iconos/imgprojects/task-manager.png",
         link: "https://github.com/Nn3z/task-manager"
+    },{
+        name: "Go CLI CRUD",
+        description: "Esta es una aplicacion CLI de prueba con un crud de tareas",
+        image: "/iconos/imgprojects/go-cli-image.png",
+        link: "https://github.com/Nn3z/go-cli-crud"
+    },{
+        name: "RavInit",
+        description: "Esta aplicacion CLI es el siguiente nivel de el script para GO, centrado en el uso de goroutines y pipelines",
+        image: "/iconos/imgprojects/ravinit.png",
+        link: "https://github.com/Nn3z/Ravinit"
     }
 ]

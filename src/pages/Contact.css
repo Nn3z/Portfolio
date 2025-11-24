@@ -24,3 +24,33 @@
   transform: scale(1.2);
   color: #ff6600; /* color del logo */
 }
+
+/* Estilos responsive para mobile */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 2rem 1rem;
+    min-height: calc(100vh - 80px);
+    gap: 1.5rem;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .social-links a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    padding: 1.5rem 0.75rem;
+    gap: 1rem;
+  }
+
+  .social-links a {
+    font-size: 1.2rem;
+  }
+}

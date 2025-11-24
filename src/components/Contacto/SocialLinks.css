@@ -15,3 +15,25 @@
   color: #ff8800;
   transform: scale(1.2);
 }
+
+/* Estilos responsive para mobile */
+@media (max-width: 768px) {
+  .social-links {
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .social-links a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links {
+    gap: 0.8rem;
+  }
+
+  .social-links a {
+    font-size: 1.3rem;
+  }
+}

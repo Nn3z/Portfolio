@@ -1,20 +1,28 @@
 .home-container {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  text-align: center;
+  min-height: 100vh;
+  padding: 2.5rem 1.5rem;
+  gap: 4rem;
 }
 
+.home-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  max-width: 520px;
+  text-align: left;
+}
 
 .profile-wrapper {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   flex-shrink: 0;
-  position: absolute;
-    left: 170px;
-    top: 200px;
 }
 
 .img-profile {
@@ -36,7 +44,6 @@
   animation: rotateClockwise 6s linear infinite;
 }
 
-
 .profile-wrapper::after {
   content: "";
   position: absolute;
@@ -48,11 +55,74 @@
   border-radius: 50%;
   animation: rotateCounter 8s linear infinite;
 }
+
 .home-text {
-    font-size: 20px;
-    position: relative;
-    top: -100px;
-  max-width: 500px; 
+  font-size: 20px;
+  max-width: 520px; 
+}
+
+.home-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.name {
+  color: #ff9900;
+}
+
+.experience {
+  color: #ff9900;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.apis {
+  color: #66dbff;
+  font-weight: bold;
+}
+
+.btn-main {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+  color: #fff;
+  border: 1px solid transparent;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.btn-main.primary {
+  background: linear-gradient(135deg, #ff8a00, #ff3d00);
+  box-shadow: 0 10px 25px rgba(255, 72, 0, 0.45);
+}
+
+.btn-main.secondary {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+}
+
+.btn-main.primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(255, 72, 0, 0.6);
+}
+
+.btn-main.secondary:hover {
+  border-color: #66dbff;
+  color: #66dbff;
+  transform: translateY(-2px);
+}
+
+.btn-main:focus-visible {
+  outline: 3px solid rgba(255, 153, 0, 0.6);
+  outline-offset: 3px;
 }
 
 @keyframes rotateClockwise {
@@ -63,4 +133,94 @@
 @keyframes rotateCounter {
   0% { transform: rotate(360deg); }
   100% { transform: rotate(0deg); }
+}
+
+/* Estilos responsive para mobile */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 2rem 1rem;
+    min-height: calc(100vh - 80px);
+    flex-direction: column;
+  }
+
+  .profile-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  .img-profile {
+    width: 250px;
+  }
+
+  .home-content {
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .home-text {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .home-text h1,
+  .home-text h2,
+  .home-text h3 {
+    text-align: center;
+  }
+
+  .home-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .btn-main {
+    width: 100%;
+    padding: 0.9rem 1.5rem;
+  }
+
+  .home-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .home-text h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .img-profile {
+    width: 200px;
+  }
+
+  .home-text {
+    font-size: 14px;
+  }
+
+  .home-actions {
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .home-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .home-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .home-text h3 {
+    font-size: 0.9rem;
+  }
+
+  .btn-main {
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+  }
 }
